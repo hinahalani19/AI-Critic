@@ -1,2 +1,2 @@
-# AI-Critic
-AI Critic - An AI-Powered Movie Review System: AI Critic leverages the Gemini AI API and Python to provide insightful, data-driven critiques of movies. 
+# AI Critic - An AI-Powered Movie Review System
+AI Critic leverages the Gemini AI API and Python to provide insightful, data-driven critiques of movies. Using advanced language models, the system analyzes film plot, themes, performances, direction, and cinematography to generate objective reviews. Whether you're a movie lover seeking fresh perspectives or a developer exploring AI applications in entertainment, AI Critic offers a unique, tech-driven approach to film analysis. With Gemini's powerful AI capabilities, this system delivers high-quality, human-like reviews at scale, making it an ideal tool for both casual users and professionals in the movie industry.
