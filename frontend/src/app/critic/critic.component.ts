@@ -34,7 +34,7 @@ export class CriticComponent {
       alert('Please enter a movie name.');
       return;
     }
-    this.criticService.generateCritic(this.movieName).subscribe(
+    this.criticService.generateCritic(this.movieName, this.targetLanguage).subscribe(
       (response: any) => {
         this.generatedReview = response.review;
       },
@@ -64,12 +64,12 @@ export class CriticComponent {
 
   playSpeech(): void {
     const payload = {
-      response_text: this.responseText,
+      response_text: this.generatedReview,
       language: this.targetLanguage,
     };
     this.criticService.playSpeech(payload).subscribe(
       () => {
-        alert('Speech played successfully.');
+        console.log('Speech played successfully.');
       },
       (error) => {
         console.error('Error playing speech:', error);

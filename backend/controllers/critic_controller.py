@@ -10,10 +10,10 @@ class CriticController:
     def register_routes(app):
         app.register_blueprint(CriticController.blueprint)
 
-    @blueprint.route("/generate/<movie_name>", methods=["GET"])
-    def generate_critic(movie_name):
+    @blueprint.route("/generate/<movie_name>/<target_language>", methods=["GET"])
+    def generate_critic(movie_name, target_language):
         try:
-            review = CriticController.critic_model.generate_critic_review(movie_name)
+            review = CriticController.critic_model.generate_critic_review(movie_name, target_language)
             return jsonify({"review": review}), 200
         except ValueError as ve:
             logging.warning(f"Validation error: {ve}")

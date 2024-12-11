@@ -8,7 +8,7 @@ class CriticModel:
     def __init__(self):
         self.model = genai.GenerativeModel("gemini-1.5-flash")
 
-    def generate_critic_review(self, movie_name):
+    def generate_critic_review(self, movie_name, target_language):
         if not movie_name:
             raise ValueError("Movie name cannot be blank.")
         try:
@@ -16,7 +16,10 @@ class CriticModel:
             response = self.model.generate_content(
                 f"Can you roast {movie_name} movie and give a fun critic review in very short"
             )
-            return response.text
+            logging.info(f"Translate: {response.text}")
+            translated_text = self.translate_text(response.text, target_language)
+            logging.info(f"Translated: {translated_text}")
+            return translated_text
         except Exception as e:
             logging.error(f"Error generating critic review: {e}")
             raise

@@ -10,8 +10,8 @@ export class CriticService {
 
   constructor(private http: HttpClient) {}
 
-  generateCritic(movieName: string): Observable<any> {
-    return this.http.get(`${this.baseUrl}/generate/${movieName}`);
+  generateCritic(movieName: string, target_language: string): Observable<any> {
+    return this.http.get(`${this.baseUrl}/generate/${movieName}/${target_language}`);
   }
 
   translateText(payload: { response_text: string; target_language: string; source_language: string }): Observable<any> {
