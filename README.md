@@ -32,5 +32,19 @@ To set up your Python environment:
 
 Clone the repository and install the dependencies as mentioned above. After setting up the environment, run the application by executing:
 
+Backend
+
 ```bash
+cd .\backend\
 python app.py
+```
+
+Frontend
+
+```bash
+cd .\frontend\
+npm install
+ng serve
+```
+The application should now be running on http://localhost:4200.
+
