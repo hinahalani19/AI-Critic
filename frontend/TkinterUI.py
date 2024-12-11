@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import messagebox
 from tkinter import ttk
-import PlayWithGemini
+import backend.app as app
 
 # Function to be called on button click
 def generate_and_play_on_click():
@@ -9,12 +9,12 @@ def generate_and_play_on_click():
     user_input = entry.get()  # Get input from Entry widget
     language =  languages.get(language_combo.get(), "en")
     print(user_input)
-    response = PlayWithGemini.translate(PlayWithGemini.generate_critic(user_input), language)
+    response = app.translate(app.generate_critic(user_input), language)
     text_widget.insert(tk.END, response + '\n')
     text_widget.yview(tk.END)
     root.update_idletasks()
 
-    PlayWithGemini.speak_without_save(response, language)
+    app.speak_without_save(response, language)
 
 # Create the main window
 root = tk.Tk()
