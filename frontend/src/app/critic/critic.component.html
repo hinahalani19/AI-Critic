@@ -1,0 +1,32 @@
+<div class="critic-container">
+    <h2>AI Movie Critic</h2>
+  
+    <!-- Generate Review -->
+    <label for="movieName">Enter Movie Name:</label>
+    <input id="movieName" [(ngModel)]="movieName" placeholder="Movie Name" />
+    <button (click)="generateCritic()">Generate Critic</button>
+    <div *ngIf="generatedReview">
+      <h3>Generated Review:</h3>
+      <p>{{ generatedReview }}</p>
+    </div>
+  
+    <!-- Translate Text -->
+    <h3>Translate Text</h3>
+    <textarea [(ngModel)]="responseText" placeholder="Enter text to translate"></textarea>
+    <label for="languageSelect">Target Language:</label>
+    <select id="languageSelect" [(ngModel)]="targetLanguage">
+      <option *ngFor="let lang of languages | keyvalue" [value]="lang.value">
+        {{ lang.key }}
+      </option>
+    </select>
+    <button (click)="translateText()">Translate</button>
+    <div *ngIf="translatedText">
+      <h3>Translated Text:</h3>
+      <p>{{ translatedText }}</p>
+    </div>
+  
+    <!-- Text-to-Speech -->
+    <h3>Text-to-Speech</h3>
+    <button (click)="playSpeech()">Play Speech</button>
+  </div>
+  
