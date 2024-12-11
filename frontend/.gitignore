@@ -1,0 +1,95 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/dist
+/tmp
+/out-tsc
+# Only exists if Bazel was run
+/bazel-out
+
+# dependencies
+/node_modules
+
+# profiling files
+chrome-profiler-events*.json
+speed-measure-plugin*.json
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Node modules
+node_modules/
+
+# Angular build outputs
+/dist/
+/out-tsc/
+/build/
+
+# Temporary files
+/.sass-cache/
+/tmp/
+/npm-debug.log*
+/yarn-debug.log*
+/yarn-error.log*
+
+# Environment files
+src/environments/environment*.ts
+
+# IDE-specific files
+.idea/
+/.vscode/
+/*.swp
+*.iml
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Coverage reports
+/coverage/
+
+# Logs
+*.log
+
+# Compiled TypeScript files
+*.js
+*.js.map
+
+# Generated files by Angular CLI
+/.angular/cache/
+/.angular/
+
+# Dependency security files
+.pnpm-debug.log*
+
+# Git-specific files
+*.orig
+
